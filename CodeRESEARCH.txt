@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+
+# Define the coordinates of the polygon vertices
+x = [23.0000, 30.0000, 33.0000, 37.5000, 42.5000, 38.1720, 10.4651, 23.0000]  # X-coordinates
+y = [15.5885, 22.5167, 36.3731, 45.8993, 61.4878, 66.1159, 18.1261, 15.5885]  # Y-coordinates
+z = [14, 17, 12, 11, 7, 0, 0, 14]
+#x = [1, 2, 3, 4, 1]  # X-coordinates (closed polygon)
+#y = [2, 4, 6, 8, 2]  # Y-coordinates (closed polygon)
+#z = [3, 6, 9, 12, 3]  # Z-coordinates (closed polygon)
+
+# Create a figure and a 3D axis
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# Plot the polygon as a closed loop
+ax.plot(x, y, z)
+
+# Set labels for the axes
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+
+# Set the plot title
+ax.set_title('Closed Polygon')
+
+# Show the plot
+plt.show()
